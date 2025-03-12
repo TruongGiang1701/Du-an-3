@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính Tổng Số Chẵn</title>
+</head>
+<body>
+    <h1>Tính Tổng Các Số Chẵn</h1>
+    <button onclick="calculateEvenSum()">Bắt đầu nhập số</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateEvenSum() {
+            let sum = 0;
+            let entry;
+
+            while (true) {
+                entry = prompt("Nhập một số (hoặc nhấn 'Hủy' để kết thúc):");
+                if (entry === null) {
+                    break;
+                }
+                let number = parseInt(entry);
+                if (!isNaN(number) && number % 2 === 0) {
+                    sum += number;
+                }
+            }
+            alert(" tổng các số chẵn là: " + sum);
+        }
+    </script>
+    
+</body>
+</html>
